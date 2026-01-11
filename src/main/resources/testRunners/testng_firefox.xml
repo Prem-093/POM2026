@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="OpenCart Regression Suite"  verbose="10"  thread-count="2" parallel="tests">
+<suite name="OpenCart Regression Suite"  verbose="10"  thread-count="1" parallel="tests">
 	
-	<test name="Login Page Test">
-	<parameter name="browser" value="firefox"></parameter>
-	
-	<classes>
-			<class name="com.qa.opencart.test.LoginPageTest"/>
-		</classes>
-	</test>
+	 <listeners>
+		<listener
+			class-name="com.qa.opencart.listeners.ExtentReportListener" />
+	</listeners>
 	
 	<test name="Registration Page Test">
 	<parameter name="browser" value="firefox"></parameter>
@@ -17,4 +14,12 @@
 			<class name="com.qa.opencart.test.RegistrationTest"/>
 		</classes>
 	</test>
+	
+	<test name="Login page Test">
+	<parameter name="browser" value="chrome"></parameter>
+	<classes>
+		<class name="com.qa.opencart.test.LoginPageTest">
+			</class>
+	</classes>
+	</test>	
 </suite>

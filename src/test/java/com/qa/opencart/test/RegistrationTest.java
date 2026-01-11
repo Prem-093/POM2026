@@ -29,29 +29,47 @@ public class RegistrationTest extends BaseTest{
 	 * }
 	 */
 	
-    @DataProvider
-	public Object[][] registrationTestData()
+	/*
+	 * @DataProvider public Object[][] registrationTestData() {
+	 * 
+	 * return new Object[][] {
+	 * 
+	 * {new Product("abc123","bcd456","abcbcd@gmail.com","7651841671","abc@1234",
+	 * "abc@1234")}, {new
+	 * Product("abc567","bcd759","efg@gmail.com","7651841673","abc@1234","abc@1234")
+	 * }, {new
+	 * Product("abc199","bcd999","hij@gmail.com","7651841676","abc@1234","abc@1234")
+	 * }
+	 * 
+	 * 
+	 * };
+	 * 
+	 * 
+	 * }
+	 */
+	
+	@DataProvider
+	
+	public  Object[][] getRegistrationData()
 	{
 		
-		return new Object[][] {
+		return new Object[][]
+				{
 			
-			{new Product("abc123","bcd456","abcbcd@gmail.com","7651841671","abc@1234","abc@1234")},
-			{new Product("abc567","bcd759","efg@gmail.com","7651841673","abc@1234","abc@1234")},
-			{new Product("abc199","bcd999","hij@gmail.com","7651841676","abc@1234","abc@1234")}
+			{new Product("Prem","Tripathi","Prem1234@gmail.com","7651841672","abc@123","abc@123")},
+			{new Product("Pranshi","Tripathi","Prem5674@gmail.com","7651841673","abc@123","abc@123")},
+			{new Product("Nidhi","Tripathi","Prem8910@gmail.com","7651841674","abc@123","abc@123")}
+			 
 			
-			
-		};
-		
-		
+				};
 	}
 	
 	
 	
-	
-	@Test(dataProvider="registrationTestData")
+	@Test(dataProvider="getRegistrationData")
 	public void testRegistrationFunctionality(Product prod)
 	{
-		String mess=registration.doRegistration(prod.getFirstName(),prod.getLastname(),prod.getEmail(),prod.getPhoneNumber(),prod.getPassword(),prod.getConfirmPassword());
+		String mess=registration.doRegistration(prod.getFirstName(),prod.getLastName(),prod.getEmailId(),prod.getPhoneNumber(),prod.getPassword(),prod.getConfirmPassword());
 		Assert.assertEquals(mess, "Your Account Has Been Created!");
 	}
 

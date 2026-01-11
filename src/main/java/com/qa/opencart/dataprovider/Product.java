@@ -2,19 +2,19 @@ package com.qa.opencart.dataprovider;
 
 public class Product {
 	
-	private String firstName;
-	private String lastname;
-	private String email;
-	private String phoneNumber;
-	private String password;
-	private String confirmPassword;
-	public Product(String firstName, String lastname, String email, String phoneNumber, String password,
+	String firstName;
+	String lastName;
+	String emailId;
+	String phoneNumber;
+	String Password;
+	String confirmPassword;
+	public Product(String firstName, String lastName, String emailId, String phoneNumber, String password,
 			String confirmPassword) {
 		this.firstName = firstName;
-		this.lastname = lastname;
-		this.email = email;
+		this.lastName = lastName;
+		this.emailId = emailId;
 		this.phoneNumber = phoneNumber;
-		this.password = password;
+		Password = password;
 		this.confirmPassword = confirmPassword;
 	}
 	public String getFirstName() {
@@ -23,17 +23,17 @@ public class Product {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
-	public String getLastname() {
-		return lastname;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public String getEmail() {
-		return email;
+	public String getEmailId() {
+		return emailId;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -42,10 +42,10 @@ public class Product {
 		this.phoneNumber = phoneNumber;
 	}
 	public String getPassword() {
-		return password;
+		return Password;
 	}
 	public void setPassword(String password) {
-		this.password = password;
+		Password = password;
 	}
 	public String getConfirmPassword() {
 		return confirmPassword;
@@ -55,8 +55,12 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [firstName=" + firstName + ", lastname=" + lastname + ", email=" + email + ", phoneNumber="
-				+ phoneNumber + ", password=" + password + ", confirmPassword=" + confirmPassword + "]";
+		return "Product [firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + emailId + ", phoneNumber="
+				+ phoneNumber + ", Password=" + Password + ", confirmPassword=" + confirmPassword + "]";
 	}
 	
+	
+	
+	
+
 }
