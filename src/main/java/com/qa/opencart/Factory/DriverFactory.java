@@ -34,7 +34,7 @@ public class DriverFactory {
 		option = new OptionManager(prop);
 		if (browsername.equalsIgnoreCase("chrome")) {
 
-		//	driver = new ChromeDriver(option.getChromeOptions());
+			driver = new ChromeDriver(option.getChromeOptions());
 			tlDriver.set(new ChromeDriver(option.getChromeOptions()));
 
 			flag = true;
